@@ -1,0 +1,140 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datausa.io/attrs/search/?kind=geo&q=denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Apr 2019 22:43:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '702'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dee2acfe10065fcabbf84be80f656bfcc1555454608; expires=Wed, 15-Apr-20
+        22:43:28 GMT; path=/; domain=.datausa.io; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept-Encoding, DHT, DNT
+      Cf-Cache-Status:
+      - HIT
+      Expires:
+      - Wed, 17 Apr 2019 02:43:28 GMT
+      Cache-Control:
+      - public, max-age=14400
+      Accept-Ranges:
+      - bytes
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4c89ada47d42c7cb-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"autocorrected": false, "data": [["16000US0820000", "denver co", 9.50230549744445,
+        "geo", "Denver, CO", "160", -1, "denver-co"], ["16000US4218888", "denver pa",
+        -0.0618953968444553, "geo", "Denver, PA", "160", -1, "denver-pa"], ["16000US3717000",
+        "denver nc", -0.0895902445075041, "geo", "Denver, NC", "160", -1, "denver-nc"],
+        ["16000US1920035", "denver ia", -0.0926263106951645, "geo", "Denver, IA",
+        "160", -1, "denver-ia"], ["16000US1817776", "denver in", -0.11162764200623,
+        "geo", "Denver, IN", "160", -1, "denver-in"], ["16000US2919162", "denver mo",
+        -0.118425468250796, "geo", "Denver, MO", "160", -1, "denver-mo"], ["16000US4819984",
+        "denver city tx", -0.0499140429624198, "geo", "Denver City, TX", "160", -1,
+        "denver-city-tx"], ["05000US08031", "denver county co", 1.7232547944549, "geo",
+        "Denver County, CO", "050", -1, "denver-county-co"], ["79500US0800812", "denver
+        city (northeast) puma co", 1.33074274502804, "geo", "Denver City (Northeast)
+        PUMA, CO", "795", -1, "denver-city-(northeast)-puma-co"], ["79500US0800815",
+        "denver city (southeast) puma co", 1.12270145713228, "geo", "Denver City (Southeast)
+        PUMA, CO", "795", -1, "denver-city-(southeast)-puma-co"], ["31000US19740",
+        "denver-aurora-lakewood co metro area", 2.1855537495207, "geo", "Denver-Aurora-Lakewood,
+        CO Metro Area", "310", -1, "denver-aurora-broomfield-co-metro-area"], ["79500US0800816",
+        "denver city (southwest) puma co", -0.270725901137131, "geo", "Denver City
+        (Southwest) PUMA, CO", "795", -1, "denver-city-(southwest)-puma-co"], ["79500US0800813",
+        "denver city (northwest) puma co", -1.09463027012869, "geo", "Denver City
+        (Northwest) PUMA, CO", "795", -1, "denver-city-(northwest)-puma-co"], ["79500US0800814",
+        "denver city (south central) puma co", -0.88448755508247, "geo", "Denver City
+        (South Central) PUMA, CO", "795", -1, "denver-city-(south-central)-puma-co"]],
+        "headers": ["id", "name", "zvalue", "kind", "display", "sumlevel", "is_stem",
+        "url_name"], "related_vars": [], "suggestions": ["denair"]}'
+    http_version: 
+  recorded_at: Tue, 16 Apr 2019 22:43:28 GMT
+- request:
+    method: get
+    uri: https://api.datausa.io/api/?force=acs.yg_transport&geo=16000US0820000&show=geo&sumlevel=place&year=latest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Apr 2019 22:43:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '613'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd4e7a4d1b5672f7690437e355552bcd81555454608; expires=Wed, 15-Apr-20
+        22:43:28 GMT; path=/; domain=.datausa.io; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept-Encoding, DHT, DNT
+      Cf-Cache-Status:
+      - MISS
+      Expires:
+      - Wed, 17 Apr 2019 02:43:28 GMT
+      Cache-Control:
+      - public, max-age=14400
+      Accept-Ranges:
+      - bytes
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4c89ada4a8034fed-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {"data": [[2016, "16000US0820000", 8181.0, 1364.0, 29967.0, 22950.0, 3052.0, 5337.0, 1506.0, 575.0, 372.0, 797.0, 477.0, 308.0, 269.0, 3575.0, 292712.0, 6152.0, 262745.0, 6427.0, 30811.0, 2819.0, 429.0, 287.0, 3540.0, 1292.0, 23750.0, 17411.0, 2465.0, 52.0, 88.0, 3060.0, 1646.0, 648.0, 1304.0, 708.0, 3337.0, 901.0, 935.0, 763.0, 16856.0, 2541.0, 377214.0, 6117.0]], "headers": ["year", "geo", "transport_bicycle", "transport_bicycle_moe", "transport_carpooled", "transport_carpooled_2_person", "transport_carpooled_2_person_moe", "transport_carpooled_3_person", "transport_carpooled_3_person_moe", "transport_carpooled_4_person", "transport_carpooled_4_person_moe", "transport_carpooled_5_6_person", "transport_carpooled_5_6_person_moe", "transport_carpooled_7_more_person", "transport_carpooled_7_more_person_moe", "transport_carpooled_moe", "transport_cartruckorvan", "transport_cartruckorvan_moe", "transport_drove", "transport_drove_moe", "transport_home", "transport_home_moe", "transport_motorcycle", "transport_motorcycle_moe", "transport_other", "transport_other_moe", "transport_publictrans", "transport_publictrans_bus", "transport_publictrans_bus_moe", "transport_publictrans_ferry", "transport_publictrans_ferry_moe", "transport_publictrans_moe", "transport_publictrans_rail", "transport_publictrans_rail_moe", "transport_publictrans_streetcar", "transport_publictrans_streetcar_moe", "transport_publictrans_subway", "transport_publictrans_subway_moe", "transport_taxi", "transport_taxi_moe", "transport_walked", "transport_walked_moe", "workers", "workers_moe"],
+                         "source": {"link": "http://www.census.gov/programs-surveys/acs/", "org": "Census Bureau", "table": "acs_1yr.yg_transport", "supported_levels": {"geo": ["nation", "state", "county", "msa", "place", "all"]}, "dataset": "2016 ACS 1-year Estimate"},
+                         "subs": {"force": "acs_1yr"},
+                         "logic": [{"link": "http://www.census.gov/programs-surveys/acs/", "org": "Census Bureau", "table": "acs_1yr.yg_transport", "supported_levels": {"geo": ["nation", "state", "county", "msa", "place", "all"]}, "dataset": "2016 ACS 1-year Estimate"}]
+                }
+    http_version: 
+  recorded_at: Tue, 16 Apr 2019 22:43:28 GMT
+recorded_with: VCR 4.0.0
