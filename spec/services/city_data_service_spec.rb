@@ -22,6 +22,13 @@ RSpec.describe "City Data Service" do
     expect(res).to eq(16856.0)
   end 
 
+  it "can return a cities bike friendlyness", :vcr do 
+    city_data = CityDataService.new
+    res = city_data.find_city_cyclists("denver")
+
+    expect(res).to eq(8181.0)
+  end 
+
   it "can return a city's median property value", :vcr do 
     city_data = CityDataService.new
     res = city_data.median_property_value("denver")

@@ -1,4 +1,5 @@
 class CityDataService
+  # FIXME - Initialize with a city location
   def conn
     @conn ||= Faraday.new(url: "https://api.datausa.io") do |c|
       c.request :url_encoded
@@ -14,7 +15,13 @@ class CityDataService
 
   def find_city_walkers(city)
     res = conn.get("/api/?geo=#{find_city_id(city)}&show=geo&sumlevel=place&year=latest&force=acs.yg_transport")
-    num_pedestrians = res.body[:data][0][40]
+    num_walkers = res.body[:data][0][40]
+  end
+
+  def find_city_cyclists(city)
+    res = conn.get("/api/?geo=#{find_city_id(city)}&show=geo&sumlevel=place&year=latest&force=acs.yg_transport")
+
+    num_cyclists = res.body[:data][0][2]
   end 
 
   def median_property_value(city)
