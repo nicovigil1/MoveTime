@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2019_04_17_021722) do
     t.float "population"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "users_id"
+    t.index ["users_id"], name: "index_favorites_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,9 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_021722) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "favorites_id"
-    t.index ["favorites_id"], name: "index_users_on_favorites_id"
   end
 
-  add_foreign_key "users", "favorites", column: "favorites_id"
+  add_foreign_key "favorites", "users", column: "users_id"
 end
