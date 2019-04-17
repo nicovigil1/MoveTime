@@ -19,7 +19,7 @@ class Api::V1::FavoritesController < ApplicationController
   
   def destroy 
     if user = User.find(params[:user_id])
-      yuh = user.favorites.where(user_id: user.id)[0].destroy
+      yuh = user.favorites.where(user_id: user.id, city_id: params[:city_id])[0].destroy
     end
   end 
 
