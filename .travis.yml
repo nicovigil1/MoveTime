@@ -1,0 +1,13 @@
+language: ruby
+before_install:
+  - export GEM_HOME=$PWD/vendor/bundle/ruby/2.1.0
+  - gem install bundler
+cache: bundler
+rvm: 
+- 2.4.1
+services: 
+  - postgresql
+before_script:
+  - psql -c 'create database MoveTime_test;' -U postgres
+script:
+  - bundle exec rspec
