@@ -1,7 +1,8 @@
 language: ruby
-install:
-  - gem uninstall bundler
-  - gem install bundler --version '1.7.4'
+before_install:
+  - export GEM_HOME=$PWD/vendor/bundle/ruby/2.1.0
+  - gem install bundler
+cache: bundler
 rvm: 
 - 2.4.1
 services: 
