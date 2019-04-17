@@ -22,7 +22,7 @@ class Api::V1::FavoritesController < ApplicationController
       yuh = user.favorites.where(user_id: user.id)[0].destroy
     end
   end 
-  
+
   private 
 
   def clean_params
@@ -31,6 +31,6 @@ class Api::V1::FavoritesController < ApplicationController
   end 
   
   def favorite_params
-    params.permit(:user_id, :city_id, :walkers, :cyclists, :property_val, :population)
+    params.permit(:user_id, :city_id, :walkers, :cyclists, :property_val, :population, :city)
   end
 end 
