@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
       get "/search", to: "search#show", as: "search"
-      resources :favorites, only: [:index, :new, :create, :destroy]
+      resources :favorites, only: [:index, :create]
+      delete "/favorites", to: "favorites#destroy"
       resources :users, only: [:create]
     end
   end
