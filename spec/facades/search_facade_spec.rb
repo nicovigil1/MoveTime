@@ -4,7 +4,7 @@ describe "search facade" do
   it 'can have attributes' do 
     search = SearchFacade.new
 
-    expect(search.city_id).to eq(0)
+    expect(search.id).to eq(0)
     expect(search.walkers).to eq(0)
     expect(search.cyclists).to eq(0)
     expect(search.property_val).to eq(0)
@@ -14,7 +14,7 @@ describe "search facade" do
   it 'can generate itself with a series of api calls', :vcr do 
     search_gen = SearchFacade.gen("denver")
    
-    expect(search_gen.city_id).to eq("16000US0820000")
+    expect(search_gen.id).to eq("16000US0820000")
     expect(search_gen.walkers).to eq(16856.0)
     expect(search_gen.cyclists).to eq(8181.0)
     expect(search_gen.property_val).to eq(360900.0)
